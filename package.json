@@ -1,0 +1,21 @@
+{
+	"name": "bilatec-backend",
+	"private": true,
+	"type": "module",
+	"engines": { "node": ">=20" },
+	"scripts": {
+		"dev": "node --watch src/server.js",
+		"start": "node src/server.js",
+		"db:init": "node scripts/init-db.js",
+		"admin:hash": "node scripts/hash-admin-password.js",
+		"admin:reset-password": "node scripts/reset-admin-password.js",
+		"test": "node --test"
+	},
+	"dependencies": {
+		"@neondatabase/serverless": "^1.0.2",
+		"cors": "^2.8.5",
+		"dotenv": "^16.6.1",
+		"express": "^5.1.0",
+		"helmet": "^8.1.0"
+	}
+}
